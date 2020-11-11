@@ -14,12 +14,13 @@ import tweepy
 #import botometer
 import csv
 import pandas as pd
+import tokens
 pd.set_option('display.max_colwidth', 100)
 
 #FOR THE BOTOMETER
 rapidapi_key = "3e780f0aa5msh2c957bc129c5c4fp1e42aajsn52ac7cb58a9d" # now it's called rapidapi key
-OAUTH_KEYS = {'consumer_key':'BWDvPWSmrJ18xEBTPbTkxiGm9', 'consumer_secret':'FodmJZP8RPjdG5ZJ0dz6xpNEjOFYG5LnFTjvmKKze8e0GmAO8b',
-    'access_token_key':'769205140645642240-pFoG4e2EpEQft63BjruaLmLvuehRQDx', 'access_token_secret':'NvpPKD8xZKd14NxmuzONg2rAApMjYkJK5wmkyE1UGgBOk'}
+OAUTH_KEYS = {'consumer_key':tokens.api_key, 'consumer_secret':tokens.api_secret_key,
+    'access_token_key':tokens.access_token_key, 'access_token_secret':access_token_secret}
 
 """
 bom = botometer.Botometer(wait_on_ratelimit=True,
